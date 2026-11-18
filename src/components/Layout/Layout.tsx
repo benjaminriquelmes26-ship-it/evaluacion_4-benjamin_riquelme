@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Navbar } from '../Navbar/Navbar';
+import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 import { profile } from '../../data/portfolioData';
 import './Layout.css';
 
@@ -10,6 +11,7 @@ export function Layout() {
         <h1 className="layout__title">{profile.nombre}</h1>
         <p className="layout__subtitle">{profile.carrera}</p>
         <Navbar />
+        <ThemeToggle />
       </header>
 
       <main className="layout__main">
