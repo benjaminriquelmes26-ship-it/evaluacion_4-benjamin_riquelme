@@ -1,0 +1,23 @@
+.project-card {
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-left: 5px solid var(--color-acento);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.project-card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: var(--color-acento);
+}
+
+.project-card__description,
+.project-card__tech {
+  margin: 0 0 0.5rem;
+}
+
+.project-card__link {
+  color: var(--color-acento);
+  font-weight: 600;
+}
