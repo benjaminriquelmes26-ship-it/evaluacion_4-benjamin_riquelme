@@ -1,0 +1,17 @@
+.status-message {
+  padding: 1rem;
+  border: 2px dashed var(--color-borde);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.status-message--error {
+  border: 2px solid #b00020;
+  color: #b00020;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .status-message--error {
+  border-color: #ff8a80;
+  color: #ff8a80;
+}
