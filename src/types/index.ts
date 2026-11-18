@@ -1,5 +1,10 @@
 export type Theme = 'light' | 'dark';
 
+export interface ThemeContextValue {
+  theme: Theme;
+  toggleTheme: () => void;
+}
+
 export interface ProjectItem {
   id: number;
   titulo: string;
@@ -17,3 +22,11 @@ export interface GitHubRepo {
   stargazers_count: number;
   updated_at: string;
 }
+
+export interface ContactFormData {
+  nombre: string;
+  correo: string;
+  mensaje: string;
+}
+
+export type ContactFormErrors = Partial<Record<keyof ContactFormData, string>>;
