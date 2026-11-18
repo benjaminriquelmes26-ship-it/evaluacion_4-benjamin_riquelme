@@ -1,14 +1,22 @@
-import { projects } from './data/portfolioData';
-import { ProjectCard } from './components/ProjectCard/ProjectCard';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Layout } from './components/Layout/Layout';
+import { HomePage } from './pages/HomePage';
+import { ProjectsPage } from './pages/ProjectsPage';
+import { ContactPage } from './pages/ContactPage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 function App() {
   return (
-    <main>
-      <h1>Trabajos del semestre</h1>
-      {projects.map((project) => (
-        <ProjectCard key={project.id} project={project} />
-      ))}
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/proyectos" element={<ProjectsPage />} />
+          <Route path="/contacto" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
